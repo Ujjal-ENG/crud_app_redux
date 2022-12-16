@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const AddBook = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
 
   const numberofBooks = useSelector((state) => state.booksReducer.books.length);
+
+  const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
     e.preventDefault();
