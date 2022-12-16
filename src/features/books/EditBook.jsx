@@ -24,7 +24,7 @@ const EditBook = () => {
     <div>
       <h1>Edit Book Status</h1>
       <form onSubmit={handleSubmit}>
-        <div className="form-filed">
+        <div className="form-field">
           <label htmlFor="title">Title: </label>
           <input
             type="text"
@@ -36,7 +36,7 @@ const EditBook = () => {
           />
         </div>
 
-        <div className="form-filed">
+        <div className="form-field">
           <label htmlFor="title">Author: </label>
           <input
             type="text"
