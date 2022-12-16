@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+body{
+  background-color: beige;
+}
+
+nav{
+  background-color: black;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-link{
+  color: white;
+  margin: 0 1rem 0 0;
+  transition: all 0.3s;
+}
+
+.nav-link:hover{
+  font-weight: bold;
+  font-size: larger;
+}
+
+main{
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+h2{
+  text-align: center;
+  margin: 3rem;
+}
+
+table{
+  
+}

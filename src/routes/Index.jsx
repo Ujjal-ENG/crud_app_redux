@@ -10,12 +10,14 @@ const Index = () => {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/show-books" element={<BooksView />} />
-        <Route path="/add-book" element={<AddBook />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/show-books" element={<BooksView />} />
+          <Route path="/add-book" element={<AddBook />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </main>
     </Router>
   );
 };
