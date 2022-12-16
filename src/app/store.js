@@ -6,3 +6,5 @@ const store = configureStore({
     booksReducer: BooksSlice,
   },
 });
+
+export default store;
