@@ -17,7 +17,8 @@ const AddBook = () => {
     e.preventDefault();
     const book = { id: numberofBooks + 1, title, author };
     dispatch(addBook(book));
-    navigate("/show-books",{replace: true});
+    navigate("/show-books", { replace: true });
+    
   };
   return (
     <div>
