@@ -42,5 +42,12 @@ h2{
 }
 
 table{
-  
+  margin: 3rem;
+  border-collapse: collapse;
 }
+
+td,th{
+  border: 1px solid;
+  padding: 1rem;
+}
+
