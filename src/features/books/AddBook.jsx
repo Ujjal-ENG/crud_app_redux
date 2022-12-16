@@ -1,9 +1,48 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const AddBook = () => {
-  return (
-    <div>AddBook</div>
-  )
-}
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
 
-export default AddBook
+  const numberofBooks = useSelector((state) => state.booksReducer.books.length);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const book = { id: numberofBooks + 1, title, author };
+  };
+  return (
+    <div>
+      <h2>Add Book</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-field">
+          <label htmlFor="title">Title: </label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="form-field">
+          <label htmlFor="Author">Author: </label>
+          <input
+            type="text"
+            id="Author"
+            name="Author"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
+  );
+};
+
+export default AddBook;
